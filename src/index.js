@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Router from './components/Router';
+
+import './styles/style.scss';
+import Routers from './components/Routers';
 
 const applicationRoot = document.getElementById('root');
-ReactDOM.render(<Router />, applicationRoot)
+ReactDOM.render(<Routers />, applicationRoot)

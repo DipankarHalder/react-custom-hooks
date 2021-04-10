@@ -1,0 +1,43 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap");
+
+// @variable
+$firaCode: "Fira Code", monospace;
+$fweight: 400;
+$white: #ffffff;
+$darkgray: #003261;
+$darkblue: #00203d;
+$gray: #8d8d8d;
+$border: #cccccc;
+$error: #ec0000;
+$btnCol: #0056e0;
+$background: #edf5fd;
+
+// @browser urgent styles
+:focus {
+  outline: -webkit-focus-ring-color auto 0px !important;
+}
+
+// @reset styles
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: $firaCode;
+  font-weight: $fweight;
+  background-color: $background;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  padding-left: 0px;
+  margin-bottom: 10px;
+}
+input, select, textarea {
+  font-family: $firaCode;
+  font-weight: $fweight;
+}
+input:focus, select:focus, textarea:focus {
+  border: 1px solid $border !important;
+}
