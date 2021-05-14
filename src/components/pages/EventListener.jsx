@@ -1,26 +1,23 @@
-import { Fragment, useRef } from 'react';
-import useEventListener from '../hooks/useEventListener';
+import { useState, useRef } from 'react';
+import { useEventListener } from '../hooks/useEventListener';
 
-export default function EventListener({ show = false, onClose = () => null }) {
+export const EventListener = () => {
+  let [show, setShow] = useState(false);
   const dialogRef = useRef();
 
-  useEventListener(
-    'mousedown',
+  useEventListener('mousedown', 
     event => {
-      console.log(event)
+      setShow(!show);
       if (event.defaultPrevented) { return; }
-      if (!dialogRef?.current?.contains(event.target)) { onClose(); }
     },
     dialogRef.current
   );
 
   return (
-    <Fragment>
-      {show && (
-        <div ref={dialogRef}>
-          Helloooooooooooooooooooo!
-        </div>
-      )}
-    </Fragment>
+    <div className="app-event-listener">
+      {show ? 
+        (<button ref={dialogRef}>Bye, Good Night!</button>) : 
+        (<button ref={dialogRef}>Hello, Good Morning!</button>)}
+    </div>
   );
 }
