@@ -6,6 +6,9 @@ import { ToggleElements } from './pages/ToggleElements';
 import { LocalStorage } from './pages/LocalStorage';
 import { HasMounted } from './pages/HasMounted';
 import { Interval } from './pages/Interval';
+import { ArrayJoin } from './pages/ArrayJoin';
+import { Draggable } from './pages/Draggable';
+import { TickerTape } from './pages/TickerTape';
 
 export const Routers = () => {
   return (
@@ -20,6 +23,9 @@ export const Routers = () => {
           <li><NavLink activeClassName="active" to="/useLocalStorage">useLocalStorage</NavLink></li>
           <li><NavLink activeClassName="active" to="/useHasMounted">useHasMounted</NavLink></li>
           <li><NavLink activeClassName="active" to="/useInterval">useInterval</NavLink></li>
+          <li><NavLink activeClassName="active" to="/useArrayJoin">useArrayJoin</NavLink></li>
+          <li><NavLink activeClassName="active" to="/useDraggable">useDraggable</NavLink></li>
+          <li><NavLink activeClassName="active" to="/useTickerTape">useTickerTape</NavLink></li>
         </ul>
         <div className="app-page-cover">
           <div className="app-container">
@@ -31,6 +37,9 @@ export const Routers = () => {
               <Route exact path="/useLocalStorage" component={LocalStorage} />
               <Route exact path="/useHasMounted" component={HasMounted} />
               <Route exact path="/useInterval" component={Interval} />
+              <Route exact path="/useArrayJoin" component={ArrayJoin} />
+              <Route exact path="/useDraggable" component={Draggable} />
+              <Route exact path="/useTickerTape" component={TickerTape} />
             </Switch>
           </div>
         </div>
